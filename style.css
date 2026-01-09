@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 
 body {
-  background-color: rgb(37, 150, 190);
+  background-color: rgb(217, 235, 255);
   text-align: center;
-  color: rgb(224, 244, 247);
+  color: rgb(255, 255, 255);
 }
 
 #myCanvas {
-  background-image: url("https://img.freepik.com/premium-photo/park-cartoon-image-background-copy-space_1169880-286389.jpg?semt=ais_hybrid&w=740&q=80");
+  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyc3Fibmo1dTgyM3ljOXd6end1cGQzMGdtdWdhcjJ4dGszaTlndWpiYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/dYtHPYJxZblCcWPwcQ/giphy.gif");
   background-size: 600px 400px;
   border-radius: 10px;
   background-position: center;
-  border: 4px solid rgb(224, 244, 247);;
+  border: 10px solid rgb(255, 255, 255);
 }
 
 h1{
-  font-family: "Rubik Dirt", system-ui;
-  font-weight: 400;
+  font-family: "Atkinson Hyperlegible Mono", system-ui;
+  font-weight: bolder;
   font-size: 50px;
+  -webkit-text-stroke: 2px rgb(163, 185, 255);
   font-style: normal;
 }
 
