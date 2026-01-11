@@ -4,10 +4,10 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var luneX = 180
+var luneX = 160
 var luneY = 140
 var luneRed = 110
-var cieloX = 220
+var cieloX = 460
 var cieloY = 140
 
 //🟢Draw Procedure - Runs on Repeat
@@ -17,19 +17,39 @@ draw = function(){
 
   noStroke();
   
-  //lune
+    //lune
   fill(201, 246, 255);
   ellipse(luneX, luneY + 70, 300, 400);//hair bg
+
   fill(255, 255, 255);
   ellipse(luneX, luneY + 200, 200, 300);//body
+
   fill(luneRed, 30, 44);
   ellipse(luneX, luneY, 230, 210);//head
+
+  triangle(luneX - 112, luneY - 8, luneX - 154, luneY + 60, luneX - 104, luneY + 43); //ears
+  triangle(luneX + 112, luneY - 8, luneX + 154, luneY + 60, luneX + 104, luneY + 43);
+
   fill(201, 246, 255);
   ellipse(luneX - 60, luneY + 30, 80, 40);//eyes
   ellipse(luneX + 60, luneY + 30, 80, 40);
-  ellipse(luneX, luneY - 40, 50, 140); //hair front
-  
 
+  ellipse(luneX, luneY - 40, 50, 140); //hair front
+  arc(luneX - 80, luneY - 100, 140, 200, radians(350), radians(490));
+  arc(luneX + 80, luneY - 100, 140, 200, radians(50), radians(190));
+  
+    //cielo
+fill(255, 249, 224);
+ellipse(cieloX, cieloY + 70, 300, 400);//hair bg
+
+fill(191, 129, 98);
+ellipse(cieloX, cieloY, 230, 210); //head
+
+fill(255, 255, 255);
+triangle(cieloX - 112, cieloY - 8, cieloX - 154, cieloY - 30, cieloX - 104, cieloY + 43); //ears
+triangle(cieloX + 112, cieloY - 8, cieloX + 154, cieloY - 30, cieloX + 104, cieloY + 43);
+triangle(cieloX - 112, cieloY + 8, cieloX - 154, cieloY + 30, cieloX - 104, cieloY + 43); 
+triangle(cieloX + 112, cieloY + 8, cieloX + 154, cieloY + 30, cieloX + 104, cieloY + 43);
 
 
 
