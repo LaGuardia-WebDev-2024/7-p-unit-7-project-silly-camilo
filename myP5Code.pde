@@ -31,16 +31,20 @@ draw = function(){
   triangle(luneX + 112, luneY - 8, luneX + 154, luneY + 60, luneX + 104, luneY + 43);
 
   fill(201, 246, 255);
-  ellipse(luneX - 60, luneY + 30, 80, 40);//eyes
-  ellipse(luneX + 60, luneY + 30, 80, 40);
+  ellipse(luneX - 60, luneY + 40, 80, 40);//eyes
+  ellipse(luneX + 60, luneY + 40, 80, 40);
 
   ellipse(luneX, luneY - 40, 50, 140); //hair front
   arc(luneX - 80, luneY - 100, 140, 200, radians(350), radians(490));
   arc(luneX + 80, luneY - 100, 140, 200, radians(50), radians(190));
   
+
     //cielo
 fill(255, 249, 224);
 ellipse(cieloX, cieloY + 70, 300, 400);//hair bg
+
+fill(252, 194, 194);
+ellipse(cieloX, cieloY + 200, 200, 300); //body
 
 fill(191, 129, 98);
 ellipse(cieloX, cieloY, 230, 210); //head
@@ -50,6 +54,36 @@ triangle(cieloX - 112, cieloY - 8, cieloX - 154, cieloY - 30, cieloX - 104, ciel
 triangle(cieloX + 112, cieloY - 8, cieloX + 154, cieloY - 30, cieloX + 104, cieloY + 43);
 triangle(cieloX - 112, cieloY + 8, cieloX - 154, cieloY + 30, cieloX - 104, cieloY + 43); 
 triangle(cieloX + 112, cieloY + 8, cieloX + 154, cieloY + 30, cieloX + 104, cieloY + 43);
+triangle(cieloX - 47, cieloY - 105, cieloX - 90, cieloY - 132, cieloX - 104, cieloY - 62);
+triangle(cieloX + 47, cieloY - 105, cieloX + 90, cieloY - 132, cieloX + 104, cieloY - 62);
+
+fill(255, 249, 224);
+ellipse(cieloX - 60, cieloY + 30, 80, 60);//eyes
+ellipse(cieloX + 60, cieloY + 30, 80, 60);
+
+arc(cieloX - 100, cieloY - 100, 180, 200, radians(350), radians(490)); //hair front
+arc(cieloX + 80, cieloY - 100, 200, 200, radians(50), radians(190));
+
+
+cieloX = mouseX;
+if(mouseY >= 200){
+    cieloY = mouseY;
+}
+
+
+if (cieloX >= 400){
+    cieloX -= 0.5;
+}
+
+if (cieloX <= 400){
+    if (luneY <= 160){
+        luneY ++;
+        luneX --;
+    }
+    if (luneRed <= 180){
+        luneRed++;
+    }
+}
 
 
 
