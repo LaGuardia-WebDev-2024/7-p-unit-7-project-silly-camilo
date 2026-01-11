@@ -9,6 +9,7 @@ var luneY = 140
 var luneRed = 110
 var cieloX = 460
 var cieloY = 140
+var luneSquint = 40
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -31,8 +32,8 @@ draw = function(){
   triangle(luneX + 112, luneY - 8, luneX + 154, luneY + 60, luneX + 104, luneY + 43);
 
   fill(201, 246, 255);
-  ellipse(luneX - 60, luneY + 40, 80, 40);//eyes
-  ellipse(luneX + 60, luneY + 40, 80, 40);
+  ellipse(luneX - 60, luneY + 40, 80, luneSquint);//eyes
+  ellipse(luneX + 60, luneY + 40, 80, luneSquint);
 
   ellipse(luneX, luneY - 40, 50, 140); //hair front
   arc(luneX - 80, luneY - 100, 140, 200, radians(350), radians(490));
@@ -66,16 +67,16 @@ arc(cieloX + 80, cieloY - 100, 200, 200, radians(50), radians(190));
 
 
 cieloX = mouseX;
-if(mouseY >= 200){
+if(mouseY >= 280){
     cieloY = mouseY;
 }
 
 
-if (cieloX >= 400){
-    cieloX -= 0.5;
-}
-
 if (cieloX <= 400){
+    if (luneSquint <= 90){
+        luneSquint ++;
+    }
+    
     if (luneY <= 160){
         luneY ++;
         luneX --;
