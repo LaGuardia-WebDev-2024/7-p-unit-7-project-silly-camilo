@@ -10,6 +10,12 @@ var luneRed = 110
 var cieloX = 460
 var cieloY = 140
 var luneSquint = 40
+var heartX = 225
+var heartY = 140
+var heartAppear = 0
+var heartAppear2 = 0
+var heartAppear3 = 0
+var cielocheek = 0
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -62,14 +68,48 @@ fill(255, 249, 224);
 ellipse(cieloX - 60, cieloY + 30, 80, 60);//eyes
 ellipse(cieloX + 60, cieloY + 30, 80, 60);
 
+fill(191, 129, 98);
+arc(cieloX - 60, cieloY + 70, 80, cielocheek, radians(201), radians(360));//under eye cheek smile :D//
+arc(cieloX + 60, cieloY + 70, 80, cielocheek, radians(180), radians(338));
+
+fill(255, 249, 224);
 arc(cieloX - 100, cieloY - 100, 180, 200, radians(350), radians(490)); //hair front
 arc(cieloX + 80, cieloY - 100, 200, 200, radians(50), radians(190));
 
 
-cieloX = mouseX;
-if(mouseY >= 280){
-    cieloY = mouseY;
+//heart1
+fill(255, 156, 210, heartAppear);
+ellipse(heartX, heartY, 30, 30);
+ellipse(heartX + 25, heartY, 30, 30);
+triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
+
+//heart1
+fill(255, 156, 210, heartAppear2);
+ellipse(heartX, heartY, 30, 30);
+ellipse(heartX + 25, heartY, 30, 30);
+triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
+
+//heart1
+fill(255, 156, 210, heartAppear3);
+ellipse(heartX, heartY, 30, 30);
+ellipse(heartX + 25, heartY, 30, 30);
+triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
+
+
+if(mouseX >= 1){
+    if(mouseY >= 1){
+        if(mouseY <= 400){
+            cieloX = mouseX;
+            if(mouseY <= 200){
+                if(mouseY >= 70){
+                    cieloY = mouseY;   
+                }
+            
+            }
+        }
+    }
 }
+
 
 
 if (cieloX <= 400){
@@ -84,7 +124,25 @@ if (cieloX <= 400){
     if (luneRed <= 180){
         luneRed++;
     }
+
+    if (cielocheek <= 60){
+        cielocheek+=10;
+    }
+
+    heartAppear +=100;
 }
+
+if(heartAppear >= 100){
+        heartY -=2;
+    }
+
+    if(heartAppear2 >= 100){
+        heartY -=2;
+    }
+
+    if(heartAppear3 >= 100){
+        heartY -=2;
+    }
 
 
 
