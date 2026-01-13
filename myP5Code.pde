@@ -16,6 +16,7 @@ var heartAppear = 0
 var heartAppear2 = 0
 var heartAppear3 = 0
 var cielocheek = 0
+var cielocheekRed = 191
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -68,7 +69,7 @@ fill(255, 249, 224);
 ellipse(cieloX - 60, cieloY + 30, 80, 60);//eyes
 ellipse(cieloX + 60, cieloY + 30, 80, 60);
 
-fill(191, 129, 98);
+fill(cielocheekRed, 129, 98);
 arc(cieloX - 60, cieloY + 70, 80, cielocheek, radians(201), radians(360));//under eye cheek smile :D//
 arc(cieloX + 60, cieloY + 70, 80, cielocheek, radians(180), radians(338));
 
@@ -127,6 +128,12 @@ if (cieloX <= 400){
 
     if (cielocheek <= 60){
         cielocheek+=10;
+    }
+
+    if (cielocheek >= 60){
+        if(cielocheekRed <= 220){
+            cielocheekRed++;
+        }
     }
 
     heartAppear +=100;
