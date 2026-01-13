@@ -14,7 +14,6 @@ var heartX = 225
 var heartY = 140
 var heartAppear = 0
 var heartAppear2 = 0
-var heartAppear3 = 0
 var cielocheek = 0
 var cielocheekRed = 191
 
@@ -84,18 +83,11 @@ ellipse(heartX, heartY, 30, 30);
 ellipse(heartX + 25, heartY, 30, 30);
 triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
 
-//heart1
+//heart2
 fill(255, 156, 210, heartAppear2);
-ellipse(heartX, heartY, 30, 30);
-ellipse(heartX + 25, heartY, 30, 30);
-triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
-
-//heart1
-fill(255, 156, 210, heartAppear3);
-ellipse(heartX, heartY, 30, 30);
-ellipse(heartX + 25, heartY, 30, 30);
-triangle(heartX - 15, heartY + 5, heartX + 13, heartY + 35, heartX + 40, heartY + 5);
-
+ellipse(heartX + 40, heartY +100, 30, 30);
+ellipse(heartX + 65, heartY +100, 30, 30);
+triangle(heartX + 25, heartY + 105, heartX + 53, heartY + 135, heartX + 80, heartY + 105);
 
 if(mouseX >= 1){
     if(mouseY >= 1){
@@ -113,7 +105,7 @@ if(mouseX >= 1){
 
 
 
-if (cieloX <= 400){
+if (cieloX <= 430){
     if (luneSquint <= 90){
         luneSquint ++;
     }
@@ -127,29 +119,25 @@ if (cieloX <= 400){
     }
 
     if (cielocheek <= 60){
-        cielocheek+=10;
-    }
-
-    if (cielocheek >= 60){
-        if(cielocheekRed <= 220){
-            cielocheekRed++;
-        }
+        cielocheek+= 5;
     }
 
     heartAppear +=100;
+
+    if(heartY <= 100){
+        heartAppear2 += 100;
+    }
 }
 
 if(heartAppear >= 100){
         heartY -=2;
     }
 
-    if(heartAppear2 >= 100){
-        heartY -=2;
+
+ if(heartAppear2 >= 100){
+        heartY --;
     }
 
-    if(heartAppear3 >= 100){
-        heartY -=2;
-    }
 
 
 
