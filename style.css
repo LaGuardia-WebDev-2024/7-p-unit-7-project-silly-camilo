@@ -22,5 +22,17 @@ h1{
   font-style: normal;
 }
 
+h2{
+  font-family: "Atkinson Hyperlegible Mono", system-ui;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px rgb(138, 165, 255);
+  font-style: normal;
+}
 
+.cielo{
+  font-family: "Atkinson Hyperlegible Mono", system-ui;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px rgb(255, 138, 222);
+  font-style: normal;
+}
 
