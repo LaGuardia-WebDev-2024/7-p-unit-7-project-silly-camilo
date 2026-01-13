@@ -14,6 +14,7 @@ var heartX = 225
 var heartY = 140
 var heartAppear = 0
 var heartAppear2 = 0
+var heartAppear3 = 0
 var cielocheek = 0
 var cielocheekRed = 191
 
@@ -22,16 +23,19 @@ draw = function(){
  
   background(255,255,255,0);
 
-  noStroke();
+  
   
     //lune
   fill(201, 246, 255);
+  stroke (161, 198, 255);
+  strokeWeight(2);
   ellipse(luneX, luneY + 70, 300, 400);//hair bg
 
   fill(255, 255, 255);
   ellipse(luneX, luneY + 200, 200, 300);//body
 
   fill(luneRed, 30, 44);
+  noStroke();
   ellipse(luneX, luneY, 230, 210);//head
 
   triangle(luneX - 112, luneY - 8, luneX - 154, luneY + 60, luneX - 104, luneY + 43); //ears
@@ -51,9 +55,12 @@ fill(255, 249, 224);
 ellipse(cieloX, cieloY + 70, 300, 400);//hair bg
 
 fill(252, 194, 194);
+stroke (255, 153, 175);
+strokeWeight(2);
 ellipse(cieloX, cieloY + 200, 200, 300); //body
 
 fill(191, 129, 98);
+noStroke();
 ellipse(cieloX, cieloY, 230, 210); //head
 
 fill(255, 255, 255);
@@ -89,6 +96,12 @@ ellipse(heartX + 40, heartY +100, 30, 30);
 ellipse(heartX + 65, heartY +100, 30, 30);
 triangle(heartX + 25, heartY + 105, heartX + 53, heartY + 135, heartX + 80, heartY + 105);
 
+//heart3
+fill(255, 156, 210, heartAppear3);
+ellipse(heartX - 10, heartY +200, 30, 30);
+ellipse(heartX + 15, heartY +200, 30, 30);
+triangle(heartX - 25, heartY + 205, heartX + 3, heartY + 235, heartX + 30, heartY + 205);
+
 if(mouseX >= 1){
     if(mouseY >= 1){
         if(mouseY <= 400){
@@ -122,10 +135,14 @@ if (cieloX <= 430){
         cielocheek+= 5;
     }
 
-    heartAppear +=100;
+    heartAppear +=200;
 
     if(heartY <= 100){
-        heartAppear2 += 100;
+        heartAppear2 += 200;
+    }
+
+    if(heartY <= 50){
+        heartAppear3 += 200;
     }
 }
 
@@ -138,13 +155,29 @@ if(heartAppear >= 100){
         heartY --;
     }
 
-
-
+if(heartAppear3 >= 100){
+        heartY --;
+    }
 
   //Show x y values when mousepressed
-  if(mousePressed){showXYPositions();}
-
+  if(mousePressed){
+    showXYPositions();
+    luneX = 160
+        luneY = 140
+        luneRed = 110
+        cieloX = 460
+        cieloY = 140
+        luneSquint = 40
+        heartX = 225
+        heartY = 140
+        heartAppear = 0
+        heartAppear2 = 0
+        heartAppear3 = 0
+        cielocheek = 0
+        cielocheekRed = 191
+    }
 }
+
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)

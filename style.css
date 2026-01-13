@@ -4,6 +4,7 @@ body {
   background-color: rgb(217, 235, 255);
   text-align: center;
   color: rgb(255, 255, 255);
+  font-family: "Atkinson Hyperlegible Mono", system-ui;
 }
 
 #myCanvas {
@@ -15,7 +16,6 @@ body {
 }
 
 h1{
-  font-family: "Atkinson Hyperlegible Mono", system-ui;
   font-weight: bolder;
   font-size: 50px;
   -webkit-text-stroke: 2px rgb(138, 165, 255);
@@ -23,16 +23,19 @@ h1{
 }
 
 h2{
-  font-family: "Atkinson Hyperlegible Mono", system-ui;
-  font-weight: bolder;
-  -webkit-text-stroke: 2px rgb(138, 165, 255);
+  font-weight: 1000;
   font-style: normal;
+  background-color: rgb(138, 165, 255);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cielo{
-  font-family: "Atkinson Hyperlegible Mono", system-ui;
-  font-weight: bolder;
-  -webkit-text-stroke: 2px rgb(255, 138, 222);
-  font-style: normal;
+  background-color: rgb(255, 138, 222);
+  border-radius: 10px;
 }
 
