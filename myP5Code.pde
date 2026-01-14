@@ -48,6 +48,12 @@ draw = function(){
   ellipse(luneX, luneY - 40, 50, 140); //hair front
   arc(luneX - 80, luneY - 100, 140, 200, radians(350), radians(490));
   arc(luneX + 80, luneY - 100, 140, 200, radians(50), radians(190));
+
+  fill(235, 255, 253);
+  rect(luneX - 100, luneY - 70, 20, 40); //hair highlights
+  rect(luneX - 70, luneY - 40, 20, 30);
+  rect(luneX + 80, luneY - 70, 20, 40); 
+  rect(luneX + 50, luneY - 40, 20, 30);
   
 
     //cielo
@@ -82,6 +88,12 @@ arc(cieloX + 60, cieloY + 70, 80, cielocheek, radians(180), radians(338));
 fill(255, 249, 224);
 arc(cieloX - 100, cieloY - 100, 180, 200, radians(350), radians(490)); //hair front
 arc(cieloX + 80, cieloY - 100, 200, 200, radians(50), radians(190));
+
+fill(255, 254, 247);
+  rect(cieloX - 110, cieloY - 80, 20, 40); //hair highlights
+  rect(cieloX - 80, cieloY - 50, 20, 30);
+  rect(cieloX + 80, cieloY - 80, 20, 40); 
+  rect(cieloX + 50, cieloY - 50, 20, 30);
 
 
 //heart1
@@ -141,7 +153,7 @@ if (cieloX <= 430){
         heartAppear2 += 200;
     }
 
-    if(heartY <= 50){
+    if(heartY <= 0){
         heartAppear3 += 200;
     }
 }
@@ -161,8 +173,7 @@ if(heartAppear3 >= 100){
 
   //Show x y values when mousepressed
   if(mousePressed){
-    showXYPositions();
-    luneX = 160
+        luneX = 160
         luneY = 140
         luneRed = 110
         cieloX = 460
