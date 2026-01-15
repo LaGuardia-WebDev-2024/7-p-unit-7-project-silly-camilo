@@ -130,12 +130,12 @@ if(mouseX >= 1){
 
 
 
-if (cieloX <= 430){
+if (cieloX <= 380){
     if (luneSquint <= 90){
         luneSquint ++;
     }
     
-    if (luneY <= 160){
+    if (luneY <= 165){
         luneY ++;
         luneX --;
     }
