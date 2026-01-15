@@ -42,21 +42,19 @@ h2{
 .meowww{
       border-radius: 20px;
       background-color: rgb(192, 211, 255);
-      width: fit-content;
+      width: 80%;
       margin: auto;
       color: rgb(255, 255, 255);
       font-weight: bold;
       margin-bottom: 20px;
       margin-top: 40px;
-      border-left: 4px solid white;
-      border-right: 4px solid white;
       padding: auto;
     }
 
     .gallery{
       background-color: rgb(255, 222, 246);
       margin: auto;
-      overflow: scroll;
+      overflow: auto;
       border-radius: 20px;
       flex-wrap: nowrap;
       white-space: nowrap;
